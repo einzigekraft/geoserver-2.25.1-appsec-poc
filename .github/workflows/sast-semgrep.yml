@@ -11,6 +11,9 @@ jobs:
   semgrep:
     name: Semgrep static analysis (Java)
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
     container:
       image: semgrep/semgrep
     steps:
