@@ -1,0 +1,41 @@
+name: SAST - Semgrep
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  semgrep:
+    name: Semgrep static analysis (Java)
+    runs-on: ubuntu-latest
+    container:
+      image: semgrep/semgrep
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Semgrep (fail on ERROR-severity findings)
+        run: |
+          semgrep scan \
+            --config=p/java \
+            --config=p/security-audit \
+            --severity=ERROR \
+            --sarif --output=semgrep-results.sarif \
+            --error \
+            .
+
+      - name: Upload SARIF to GitHub Code Scanning
+        if: always()
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: semgrep-results.sarif
+
+      - name: Upload SARIF as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: semgrep-sarif
+          path: semgrep-results.sarif
