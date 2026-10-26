@@ -17,6 +17,12 @@ jobs:
 
       - name: Run Trivy filesystem scan (fails on CRITICAL/HIGH)
         uses: aquasecurity/trivy-action@a9c7b0f06e461e9d4b4d1711f154ee024b8d7ab8 # v0.36.0
+        env:
+          # Avoid Trivy reaching out to remote Maven repos (repo.osgeo.org) to
+          # resolve parent POMs for this multi-module project - that network
+          # resolution step timed out in CI. Offline scan uses only the
+          # dependency versions declared in the committed pom.xml files.
+          TRIVY_OFFLINE_SCAN: 'true'
         with:
           scan-type: fs
           scan-ref: .
@@ -26,6 +32,7 @@ jobs:
           format: sarif
           output: trivy-results.sarif
           trivyignores: .trivyignore
+          timeout: '10m0s'
 
       - name: Upload SARIF to GitHub Code Scanning
         if: always()
