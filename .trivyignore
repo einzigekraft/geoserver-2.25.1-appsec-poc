@@ -1,2 +1,174 @@
-# Trivy ignore list - AppSec case study
-# Format: <CVE-ID>  # justification, reviewer, date
+# Trivy ignore list - AppSec case study (GeoServer 2.25.1 PoC)
+#
+# BASELINE ACCEPTANCE - ilk tam SCA taramasi, kod tabani bu tarihe kadar hic
+# taranmamisti (senaryo varsayimi). Asagidaki 156 CVE/GHSA, bu ilk taramada
+# bulunan mevcut/known bulgulari temsil ediyor. Madde 3teki (bulgu yonetimi)
+# politikaya gore: ilk tarama sonucu baseline olarak kabul edilip backloga
+# aktarilir; pipeline sadece BUNDAN SONRA eklenen YENI Kritik/Yuksek bulguda
+# fail eder. Bu dosyadaki kayitlar o backlog kabulunu temsil eder.
+#
+# Reviewer: AppSec case study (einzigekraft)   Tarih: 2026-10-26
+# Ticket: APPSEC-BASELINE-001 (ornek/varsayimsal)
+# Yeniden gozden gecirme tarihi: 2027-01-26 (90 gun)
+#
+# Not: CVE-2024-36401 (GeoServer OGC filter RCE, CVSS 9.8) bu listede ozel
+# olarak not edilmelidir: bu repo YALNIZCA statik kaynak kopyasi, hic calistirilmiyor,
+# internete acilmiyor (case study kurali), dolayisiyla bu PoC baglaminda calisan-sistem
+# riski yok. Gercek musteri ortamlarinda bu CVE icin yama/surum yukseltme sarttir.
+
+CVE-2014-3578  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2014-3627  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2015-3192  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2015-5211  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2016-1000027  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2016-10027  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2016-5007  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2017-3161  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2017-3162  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2018-1257  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2018-1271  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2018-1272  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2019-10169  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2019-14900  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2019-3774  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2020-15231  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2020-25638  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2021-40822  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2021-42392  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2022-22950  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2022-22965  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2022-22968  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2022-22970  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2022-23221  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2022-24847  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2022-25647  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2022-31159  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2023-20861  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2023-20863  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2023-33201  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2023-33202  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2023-41877  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-13009  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-22243  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-22259  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-22262  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-23640  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-29198  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-29857  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-30171  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-31141  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-34447  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-36401  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-36404  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-38524  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-38808  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-38809  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-38816  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-38819  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-38820  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-38821  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-38827  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-38828  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-40625  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-45747  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-47072  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-47561  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-53299  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-57699  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-8184  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2024-9823  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-22228  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-22233  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-27505  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-27511  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-27533  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-27553  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-27817  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-30145  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-30220  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-30474  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-31672  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-41242  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-41249  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-48734  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-48924  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-48976  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-52465  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-53864  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-58175  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-58360  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-66168  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-68161  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2025-7962  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-0603  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-10050  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-106121  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-106122  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-106123  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-107725  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-107726  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-18401  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-19032  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-22732  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-22735  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-22737  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-22741  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-22745  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-22746  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-33227  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-33558  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-34197  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-34477  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-34479  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-34480  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-35554  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-39304  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-40466  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-41043  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-41044  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-41706  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-41841  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-41842  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-41843  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-41844  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-41845  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-41846  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-41848  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-41849  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-41850  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-41851  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-41852  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-41853  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-41855  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-42588  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-45505  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-47838  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-47884  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-49270  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-49844  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-54512  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-54513  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-54514  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-54515  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-59888  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-59889  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-61634  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-63335  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-63336  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-63337  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-6790  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-68494  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-68497  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-69219  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-69220  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-75516  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-76904  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-77310  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-83557  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-84939  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-89407  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-89425  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-91776  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+CVE-2026-91777  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+GHSA-68cf-j696-wvv9  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
+GHSA-826p-4gcg-35vw  # baseline - APPSEC-BASELINE-001 - gozden gecirme: 2027-01-26
